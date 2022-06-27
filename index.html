@@ -77,13 +77,62 @@
         <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <div class="modal-container">
-              <button class="modal-close-btn" type="button" data-modal-close>
-                <svg class="modal-close-icon">
-                  <use href="./images/icons.svg#icon-close-black"></use>
-                </svg>
-              </button>
-            </div>
+            <button class="modal-close-btn" type="button" data-modal-close>
+              <svg class="modal-close-icon">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <form name="data-transfer" action="#" autocomplete="on">
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">Оставьте свои данные, мы вам перезвоним</legend>
+                <label class="form-label" for="user-name">
+                  Имя
+                  <svg class="input-icon">
+                    <use href="./images/icons.svg#icon-email"></use>
+                  </svg>
+                  <input
+                    class="form-input-text"
+                    type="text"
+                    name="name"
+                    id="user-name"
+                    minlength="3"
+                    placeholder=" "
+                    required
+                    autofocus
+                  />
+                </label>
+
+                <label class="form-label" for="user-phone">Телефон</label>
+                <input
+                  class="form-input-text"
+                  type="tel"
+                  name="phone"
+                  id="user-phone"
+                  pattern="\+?[0-9\s\-\(\)]+"
+                  placeholder=" "
+                  required
+                />
+                <label class="form-label" for="user-email">Почта</label>
+                <input
+                  class="form-input-text"
+                  type="email"
+                  name="email"
+                  id="user-email"
+                  minlength="3"
+                  placeholder=" "
+                  required
+                />
+
+                <label class="form-label notes" for="user-notes">Комментарии</label>
+                <textarea
+                  class="form-textarea"
+                  name="notes"
+                  id="user-notes"
+                  rows="3"
+                  placeholder="Введите текст"
+                ></textarea>
+              </fieldset>
+            </form>
           </div>
         </div>
       </section>
