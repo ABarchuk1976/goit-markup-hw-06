@@ -58,7 +58,7 @@
   --social-icon-width: 20px;
   --social-icon-height: 20px;
 
-  --defaul-duration: 2250ms;
+  --defaul-duration: 250ms;
 
   --default-timing: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -88,6 +88,9 @@
   --modal-label-color: #757575;
 
   --modal-form-width: 448px;
+  --modal-submit-btn-color: #ffffff;
+  --modal-submit-btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --modal-submit-btn-hover: #188ce8;
 }
 
 /* body */
@@ -438,7 +441,6 @@ img {
   align-items: center;
   width: var(--modal-form-width);
   text-align: left;
-  outline: 1px solid tomato;
   padding: 0;
   margin-bottom: 20px;
 }
@@ -528,6 +530,50 @@ img {
 
 .form-textarea::placeholder {
   color: var(--modal-placeholder-color);
+}
+
+.form-agreement {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.form-agreement-label {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--modal-text-color);
+}
+
+.form-agreement-link {
+  color: var(--accent-color);
+}
+
+.form-submit-btn {
+  display: flex;
+  width: 200px;
+  height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+
+  color: var(--modal-submit-btn-color);
+  box-shadow: var(--modal-submit-btn-shadow);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: var(--modal-board-radius);
+  cursor: pointer;
+
+  transition: background-color var(--defaul-duration) var(--default-timing);
+}
+
+.form-submit-btn:hover {
+  background-color: var(--modal-submit-btn-hover);
 }
 
 .backdrop.is-hidden .modal {
