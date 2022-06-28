@@ -458,15 +458,6 @@ img {
   margin-bottom: 12px;
 }
 
-.form-field {
-  position: relative;
-  width: 100%;
-  margin-bottom: 10px;
-  color: var(--modal-icon-color);
-
-  transition: color var(--defaul-duration) var(--default-timing);
-}
-
 .form-label {
   display: block;
   font-size: 12px;
@@ -476,6 +467,15 @@ img {
   color: var(--modal-label-color);
   padding: 0;
   margin-bottom: 4px;
+}
+
+.form-field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  color: var(--modal-icon-color);
+
+  transition: color var(--defaul-duration) var(--default-timing);
 }
 
 .form-input {
@@ -501,7 +501,8 @@ img {
 .input-icon {
   position: absolute;
   left: 12px;
-  bottom: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 
   width: 18px;
   height: 18px;
