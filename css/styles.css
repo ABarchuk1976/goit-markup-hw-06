@@ -478,6 +478,11 @@ img {
   transition: color var(--defaul-duration) var(--default-timing);
 }
 
+.form-field:focus-within {
+  border: var(--modal-input-border-accent);
+  color: var(--accent-color);
+}
+
 .form-input {
   width: 100%;
   min-height: 40px;
@@ -487,15 +492,6 @@ img {
   padding-left: 42px;
 
   transition: border var(--defaul-duration) var(--default-timing);
-}
-
-.form-input:focus-within,
-.form-textarea:focus-within {
-  border: var(--modal-input-border-accent);
-}
-
-.form-field:focus-within {
-  color: var(--accent-color);
 }
 
 .input-icon {
