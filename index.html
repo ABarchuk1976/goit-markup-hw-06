@@ -82,16 +82,16 @@
                 <use href="./images/icons.svg#icon-close"></use>
               </svg>
             </button>
-            <form name="data-transfer" action="#" autocomplete="on">
-              <fieldset class="form-fieldset">
-                <legend class="form-legend">Оставьте свои данные, мы вам перезвоним</legend>
-                <label class="form-label" for="user-name">
-                  Имя
+            <form class="form" name="data-transfer" autocomplete="on">
+              <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+              <div role="group" class="form-group-field">
+                <div class="form-field">
+                  <label class="form-label" for="user-name">Имя</label>
                   <svg class="input-icon">
-                    <use href="./images/icons.svg#icon-email"></use>
+                    <use href="./images/icons.svg#icon-person"></use>
                   </svg>
                   <input
-                    class="form-input-text"
+                    class="form-input"
                     type="text"
                     name="name"
                     id="user-name"
@@ -100,38 +100,51 @@
                     required
                     autofocus
                   />
-                </label>
+                </div>
 
-                <label class="form-label" for="user-phone">Телефон</label>
-                <input
-                  class="form-input-text"
-                  type="tel"
-                  name="phone"
-                  id="user-phone"
-                  pattern="\+?[0-9\s\-\(\)]+"
-                  placeholder=" "
-                  required
-                />
-                <label class="form-label" for="user-email">Почта</label>
-                <input
-                  class="form-input-text"
-                  type="email"
-                  name="email"
-                  id="user-email"
-                  minlength="3"
-                  placeholder=" "
-                  required
-                />
+                <div class="form-field">
+                  <label class="form-label" for="user-phone">Телефон</label>
+                  <svg class="input-icon">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                  <input
+                    class="form-input"
+                    type="tel"
+                    name="phone"
+                    id="user-phone"
+                    pattern="\+?[0-9\s\-\(\)]+"
+                    placeholder=" "
+                    required
+                  />
+                </div>
 
-                <label class="form-label notes" for="user-notes">Комментарии</label>
-                <textarea
-                  class="form-textarea"
-                  name="notes"
-                  id="user-notes"
-                  rows="3"
-                  placeholder="Введите текст"
-                ></textarea>
-              </fieldset>
+                <div class="form-field">
+                  <label class="form-label" for="user-email">Почта</label>
+                  <svg class="input-icon">
+                    <use href="./images/icons.svg#icon-email"></use>
+                  </svg>
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="email"
+                    id="user-email"
+                    minlength="3"
+                    placeholder=" "
+                    required
+                  />
+                </div>
+
+                <div class="form-feild">
+                  <label class="form-label" for="user-notes">Комментарии</label>
+                  <textarea
+                    class="form-textarea"
+                    name="notes"
+                    id="user-notes"
+                    rows="3"
+                    placeholder="Введите текст"
+                  ></textarea>
+                </div>
+              </div>
             </form>
           </div>
         </div>
