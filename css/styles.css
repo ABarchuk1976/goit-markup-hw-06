@@ -7,9 +7,11 @@
   --header-link-color: #757575;
   --header-border-color: #ececec;
   --footer-address-color: #ffffff;
-  --footer-call-to-color: #ffffff;
+  --footer-cta-color: #ffffff;
   --footer-social-icons-bg: rgba(255, 255, 255, 0.1);
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
+  --footer-form-input-color: rgba(255, 255, 255, 0.6);
+  --footer-form-input-border: 1px solid rgba(255, 255, 255, 0.3);
   --hero-title-color: #ffffff;
   --button-hero-hover-bg: #188ce8;
   --button-accent-color: #ffffff;
@@ -50,7 +52,7 @@
   --clients-icons-color: #afb1b8;
   --clients-border-color: #afb1b8;
   --clients-bg: transparent;
-  --clients-border-radius: 4px;
+  --main-border-radius: 4px;
 
   --perculiarities-icon-width: 70px;
   --perculiarities-icon-height: 70px;
@@ -84,7 +86,6 @@
   --modal-padding-horizontal: 16px;
   --modal-padding-vertical: 12px;
   --modal-placeholder-color: rgba(117, 117, 117, 0.5);
-  --modal-placeholder-size: 14px;
   --modal-label-color: #757575;
 
   --modal-form-width: 448px;
@@ -125,6 +126,9 @@ img {
   height: auto;
 }
 
+*:focus-visible {
+  outline: none;
+}
 /* common styles for header and footer*/
 
 .visually-hidden {
@@ -322,12 +326,12 @@ img {
   color: var(--accent-color);
 }
 
-.footer-right-block {
+.footer-central-block {
   margin-left: 70px;
-  color: var(--footer-call-to-color);
+  color: var(--footer-cta-color);
 }
 
-.footer-call-to {
+.footer-cta {
   display: block;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -358,6 +362,40 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-color);
+}
+
+.footer-right-block {
+  margin-left: auto;
+  color: var(--footer-cta-color);
+}
+
+.subscription {
+  display: flex;
+  align-items: center;
+}
+
+.subscription-input {
+  display: flex;
+  align-items: center;
+  min-width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  margin-right: 12px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--footer-form-input-color);
+
+  background-color: transparent;
+  border: var(--footer-form-input-border);
+  border-radius: var(--main-border-radius);
+}
+
+.form-submit-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: var(--modal-submit-btn-color);
 }
 /* styles for index.html/main */
 
@@ -478,8 +516,7 @@ img {
   transition: color var(--defaul-duration) var(--default-timing);
 }
 
-.form-field:focus-within {
-  border: var(--modal-input-border-accent);
+.form-field:focus-within .input-icon {
   color: var(--accent-color);
 }
 
@@ -492,6 +529,10 @@ img {
   padding-left: 42px;
 
   transition: border var(--defaul-duration) var(--default-timing);
+}
+
+.form-input:focus-within {
+  border: var(--modal-input-border-accent);
 }
 
 .input-icon {
@@ -521,16 +562,21 @@ img {
   transition: border var(--defaul-duration) var(--default-timing);
 }
 
+.form-textarea:focus-within {
+  border: var(--modal-input-border-accent);
+}
+
 .form-textarea::placeholder {
   color: var(--modal-placeholder-color);
 }
 
-.form-agreement {
-  display: inline-block;
-  margin-bottom: 30px;
-}
-
 .form-agreement-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-left: 24px;
+
   line-height: 1.71;
   letter-spacing: 0.03em;
 
@@ -541,18 +587,54 @@ img {
   color: var(--accent-color);
 }
 
+.form-agreement-icon-check {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 16px;
+  height: 15px;
+  opacity: 1;
+
+  transition: opacity var(--defaul-duration) var(--default-timing);
+}
+
+.checkbox:checked ~ .form-agreement-icon-check {
+  opacity: 0;
+}
+
+.form-agreement-icon-checked {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 16px;
+  height: 15px;
+  opacity: 0;
+
+  fill: var(--accent-color);
+
+  transition: opacity var(--defaul-duration) var(--default-timing);
+}
+
+.checkbox:checked ~ .form-agreement-icon-checked {
+  opacity: 1;
+}
+
 .form-submit-btn {
   display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 200px;
   height: 50px;
+  padding: 0;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
   letter-spacing: 0.06em;
 
   color: var(--modal-submit-btn-color);
@@ -815,7 +897,7 @@ img {
   color: var(--clients-icons-color);
   background-color: var(--clients-bg);
   border: 1px solid var(--clients-border-color);
-  border-radius: var(--clients-border-radius);
+  border-radius: var(--main-border-radius);
 
   transition: color var(--defaul-duration) var(--default-timing),
     border var(--defaul-duration) var(--default-timing);

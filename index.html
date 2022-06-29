@@ -128,7 +128,6 @@
                     type="email"
                     name="email"
                     id="user-email"
-                    minlength="3"
                     placeholder=" "
                     required
                   />
@@ -145,13 +144,17 @@
                   ></textarea>
                 </div>
               </div>
-              <div class="form-agreement">
-                <input class="" type="checkbox" name="agreement" id="user-agreement" />
-                <label class="form-agreement-label" for="user-agreement"
-                  >Соглашаюсь с рассылкой и принимаю
-                  <a class="form-agreement-link" href="#">Условия договора</a></label
-                >
-              </div>
+              <label class="form-agreement-label">
+                <input class="checkbox visually-hidden" type="checkbox" name="agreement" required />
+                Соглашаюсь с рассылкой и принимаю&nbsp;
+                <a class="form-agreement-link" href="#">Условия договора</a>
+                <svg class="form-agreement-icon-check">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+                <svg class="form-agreement-icon-checked">
+                  <use href="./images/icons.svg#icon-checked"></use>
+                </svg>
+              </label>
               <button class="form-submit-btn" type="submit">Отправить</button>
             </form>
           </div>
@@ -495,8 +498,8 @@
             </ul>
           </address>
         </div>
-        <div class="footer-right-block">
-          <b class="footer-call-to">присоединяйтесь</b>
+        <div class="footer-central-block">
+          <b class="footer-cta">Присоединяйтесь</b>
           <ul class="footer-social-items">
             <li class="footer-social-item">
               <a href="#" class="footer-social-link">
@@ -527,6 +530,24 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-right-block">
+          <b class="footer-cta">Подпишитесь на рассылку</b>
+          <form class="subscription" name="subscription" autocomplete="on">
+            <input
+              class="subscription-input"
+              type="email"
+              name="subsrtiption-email"
+              placeholder="E-mail"
+              required
+            />
+            <button class="form-submit-btn" type="submit">
+              Подписаться
+              <svg class="form-submit-icon">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
