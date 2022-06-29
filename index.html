@@ -93,7 +93,7 @@
                   <input
                     class="form-input"
                     type="text"
-                    name="name"
+                    name="user-name"
                     id="user-name"
                     minlength="3"
                     placeholder=" "
@@ -110,7 +110,7 @@
                   <input
                     class="form-input"
                     type="tel"
-                    name="phone"
+                    name="user-phone"
                     id="user-phone"
                     pattern="\+?[0-9\s\-\(\)]+"
                     placeholder=" "
@@ -126,7 +126,7 @@
                   <input
                     class="form-input"
                     type="email"
-                    name="email"
+                    name="user-email"
                     id="user-email"
                     placeholder=" "
                     required
@@ -137,7 +137,7 @@
                   <label class="form-label" for="user-notes">Комментарии</label>
                   <textarea
                     class="form-textarea"
-                    name="notes"
+                    name="user-notes"
                     id="user-notes"
                     rows="3"
                     placeholder="Введите текст"
@@ -145,7 +145,12 @@
                 </div>
               </div>
               <label class="form-agreement-label">
-                <input class="checkbox visually-hidden" type="checkbox" name="agreement" required />
+                <input
+                  class="checkbox visually-hidden"
+                  type="checkbox"
+                  name="user-agreement"
+                  required
+                />
                 Соглашаюсь с рассылкой и принимаю&nbsp;
                 <a class="form-agreement-link" href="#">Условия договора</a>
                 <svg class="form-agreement-icon-check">
