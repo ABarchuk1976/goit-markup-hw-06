@@ -450,7 +450,6 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99;
   width: 100%;
   min-height: 100%;
 
@@ -787,20 +786,17 @@ img {
 
 .destinations-list {
   display: flex;
-  margin-left: calc(-1 * var(--grid-row-gap));
-  margin-top: calc(-1 * var(--grid-column-gap));
+  justify-content: space-between;
 }
 
 .destinations-item {
   position: relative;
-  flex-basis: calc(100% / 3 - var(--grid-row-gap));
-  margin-left: var(--grid-row-gap);
-  margin-top: var(--grid-column-gap);
 }
 
 .destination-description {
   position: absolute;
   bottom: 0;
+  left: 0;
   display: flex;
   width: 100%;
   height: 70px;
@@ -811,7 +807,6 @@ img {
   text-transform: uppercase;
   color: var(--destination-description-color);
   background-color: var(--destination-description-bg);
-  z-index: 1;
 }
 /* Our team */
 .team {
